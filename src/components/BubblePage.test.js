@@ -6,7 +6,7 @@ import BubblePage from './BubblePage';
 
 import fetchColorService from "../services/fetchColorService";
 jest.mock("../services/fetchColorService");
-const mockFetchColors = jest.fn;
+
 test("Renders without errors", () => {
   fetchColorService.mockResolvedValueOnce({
     data: [],
