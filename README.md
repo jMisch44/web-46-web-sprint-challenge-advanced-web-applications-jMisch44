@@ -22,7 +22,7 @@ In this project you will create a login page and request a token from the server
 * Push commits: git push origin <firstName-lastName>.
 * RUN npm install to install your dependencies.
 * RUN npm start to start your application.
- 
+ x
 ### Task 2: Project Requirements
 Your finished project must include all of the following requirements. **Unlike other projects, the local server used here can not be accessed through the browser. It is started automatically and without the need for starting a server.js file. Feel free to ignore any messages related to MSW or mock service workers. For this and the rest of your sprint challenges, test the functioning of the server directly through your http calls.**
 
