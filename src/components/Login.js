@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
-import axiosWithAuth from "../helpers/axiosWithAuth";
 
 const initialState = {
   username: "",

@@ -9,18 +9,7 @@ jest.mock("../services/fetchColorService");
 const mockFetchColors = jest.fn;
 test("Renders without errors", () => {
   fetchColorService.mockResolvedValueOnce({
-    data: [
-      {
-        code: { hex: "#99ddbc" },
-        color: "limegreen",
-        id: 2,
-      },
-      {
-        code: { hex: "#fff" },
-        color: "white",
-        id: 1,
-      },
-    ],
+    data: [],
   });
   render(<BubblePage />);
 });
