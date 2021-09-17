@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 import axiosWithAuth from "../helpers/axiosWithAuth";
 
 const initialState = {
@@ -7,8 +8,9 @@ const initialState = {
   password: "",
 };
 
-const Login = () => {
+const Login = (props) => {
   const [input, setInput] = useState(initialState);
+  const { push } = useHistory();
 
   const handleChange = (e) => {
     setInput({
@@ -26,7 +28,7 @@ const Login = () => {
       .then((res) => {
         localStorage.setItem("token", res.data.payload);
         setError("");
-        // props.history.push(`/`)
+        push(`/bubbles`);
       })
       .catch((err) => {
         console.log(err);
