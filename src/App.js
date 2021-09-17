@@ -7,7 +7,7 @@ import Login from "./components/Login";
 import "./styles.scss";
 import axiosWithAuth from "./helpers/axiosWithAuth";
 
-function App(props) {
+function App() {
   const handleLogout = () => {
     axiosWithAuth()
       .post(`http://localhost:5000/api/logout`)
