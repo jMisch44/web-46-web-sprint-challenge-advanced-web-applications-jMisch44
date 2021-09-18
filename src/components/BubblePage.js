@@ -27,18 +27,20 @@ const BubblePage = () => {
     axiosWithAuth()
       .put(`http://localhost:5000/api/colors/${editColor.id}`, editColor)
       .then((res) => {
-        setColors(
-          colors.filter((color) => {
-            if (color.id !== res.data.id) {
-              return color;
-            } else {
-              return res.data;
-            }
-          })
+        // setColors(
+        //   colors.filter((color) => {
+        //     if (color.id !== res.data.id) {
+        //       return color;
+        //     } else {
+        //       return res.data;
+        //     }
+        //   })
+        // );
+        const editedColor = colors.findIndex(
+          (color) => color.id === res.data.id
         );
-        // let nonEditedColors = colors.filter((c) => c.id !== res.data.id);
-        // nonEditedColors.push(res.data);
-        // setColors(nonEditedColors);
+        colors[editedColor] = res.data;
+        setColors([...colors]);
       })
       .catch((err) => {
         console.log(err);
